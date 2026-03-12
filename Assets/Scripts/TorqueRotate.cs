@@ -20,9 +20,5 @@ public class TorqueRotate : MonoBehaviour
         {
             rb.AddTorque(Vector3.right * torquePower);
         }
-        else 
-        {
-            rb.angularVelocity = Vector3.zero;
-        }
     }
 }
