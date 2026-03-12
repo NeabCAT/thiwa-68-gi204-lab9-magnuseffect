@@ -3,7 +3,7 @@ using UnityEngine.InputSystem;
 
 public class MagnusEffectKick : MonoBehaviour
 {
-    public float kickForec;
+    public float kickForce;
     public float spinAmount;
     public float magnusStrength = 0.5f;
 
@@ -20,7 +20,7 @@ public class MagnusEffectKick : MonoBehaviour
     {
         if (Keyboard.current.spaceKey.wasPressedThisFrame && !isShot)
         {
-            rb.AddForce(Vector3.forward * kickForec, ForceMode.Impulse);
+            rb.AddForce(Vector3.forward * kickForce, ForceMode.Impulse);
 
             rb.AddTorque(Vector3.up * spinAmount);
 
