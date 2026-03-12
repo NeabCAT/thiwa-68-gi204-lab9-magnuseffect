@@ -3,7 +3,7 @@ using UnityEngine.InputSystem;
 
 public class TorqueRotate : MonoBehaviour
 {
-    [SerializeField] private float torqueSpeed;
+    [SerializeField] private float torquePower;
 
     Rigidbody rb;
 
@@ -18,9 +18,9 @@ public class TorqueRotate : MonoBehaviour
     {
         if (Keyboard.current.dKey.isPressed)
         {
-            rb.AddTorque(Vector3.up * torqueSpeed);
+            rb.AddTorque(Vector3.right * torquePower);
         }
-        else
+        else 
         {
             rb.angularVelocity = Vector3.zero;
         }
